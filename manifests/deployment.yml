@@ -1,0 +1,16 @@
+apiVersion : apps/v1beta1
+kind: Deployment
+metadata:
+  name: poornimaypipelinesjavascriptdocker 
+spec:
+  replicas: 1
+  template:
+    metadata:
+      labels:
+        app: poornimaypipelinesjavascriptdocker 
+    spec:
+      containers:
+        - name: poornimaypipelinesjavascriptdocker 
+          image: listsample.azurecr.io/poornimaypipelinesjavascriptdocker
+          ports:
+          - containerPort: 8080
